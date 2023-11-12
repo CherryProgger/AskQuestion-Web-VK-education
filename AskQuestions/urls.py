@@ -18,8 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from app import views
 
-
 urlpatterns = [
-    path('', views.index),
+    path('', views.layout, name='index'),
+    path('addQuestion', views.addQuestion),
+    path('answersList/<int:question_id>', views.answersList, name='question'),
+    path('tagQuestions', views.tagQuestions),
+    path('settingsPage', views.settingsPage),
+    path('authorization', views.authorization),
+    path('registration', views.registration),
     path('admin/', admin.site.urls),
 ]

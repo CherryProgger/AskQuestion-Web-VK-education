@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en" class="h-100" data-bs-theme="auto">
-
-
 <head>
     <script src="/docs/5.3/assets/js/color-modes.js"></script>
     <meta charset="utf-8">
@@ -76,14 +74,11 @@
             --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
             --bs-btn-font-weight: 600;
-            --bs-btn-color: var(--bs-white);
             --bs-btn-bg: var(--bd-violet-bg);
             --bs-btn-border-color: var(--bd-violet-bg);
-            --bs-btn-hover-color: var(--bs-white);
             --bs-btn-hover-bg: #6528e0;
             --bs-btn-hover-border-color: #6528e0;
             --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-            --bs-btn-active-color: var(--bs-btn-hover-color);
             --bs-btn-active-bg: #5a23c8;
             --bs-btn-active-border-color: #5a23c8;
         }
@@ -100,6 +95,8 @@
 
     <link href="../static/css/main.css" rel="stylesheet">
 </head>
+
+
 <body class="d-flex flex-column h-100">
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -116,12 +113,10 @@
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
 </svg>
-
-
 <header>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" id="navbar-askme">AskQueston</a>
+            <a class="navbar-brand" id="navbar-askme" href="{% url 'index' %}">AskQueston</a>
             <form class="d-flex">
                 <input class="form-control me-2" id="navbar-search" type="search" placeholder="Write your question"
                        aria-label="Search">
@@ -145,33 +140,11 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <h1>Log in</h1>
-                </br>
-                <div class="alert alert-danger" role="alert">
-                    Sorry, wrong email or pessword.
-                </div>
-                </br>
+            {% block content %}
 
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-outline-primary">Log in</button>
-                    </br>
-                    </br>
-                    <div class="question-title"><a href="">Create new account</a></div>
 
-                </form>
 
+            {% endblock %}
             </div>
             <div class="col-4">
                 <ul class="list-group" style="margin-left: 100px; font-width: 500px;">
@@ -228,6 +201,5 @@
 <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
 </body>
 </html>

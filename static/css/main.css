@@ -1,0 +1,116 @@
+main > .container {
+    padding: 50px 15px 0;
+}
+
+.questionAtList {
+    margin-top: 0px;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+.question {
+    border: 1px solid grey;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.question-image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.question-title {
+    font-size: 20px;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.tags {
+    max-width: 100px;
+}
+
+.Likes {
+    padding: 20px 0px 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 6px;
+    max-width: 24px;
+}
+
+.GuitarsTag {
+    padding: 0px 30px;
+}
+
+.htmlTag {
+    padding: 0px 70px;
+}
+
+.mathematicsTag {
+    padding: 0px 90px;
+}
+
+.alert-danger {
+    max-width: 270px;
+    max-height: 200px;
+}
+
+.secondalert {
+    max-width: 370px;
+    max-: 200px;
+}
+
+height
+#navbar-search {
+    min-width: 350px;
+}
+
+#navbar-askme {
+    margin-left: 10px;
+}
+
+#navbar-user {
+    margin-right: 10px;
+    position: relative;
+    width: 15%;
+}
+
+#navbar-ask {
+    min-width: 70px;
+}
+
+.navbar-user-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 20%;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.navbar-user-info {
+    position: absolute;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.navbar-user-control {
+    margin-top: 5px;
+}
+
+.likepostbuttn {
+    margin-left: 20px;
+}
+
+.bt {
+    width: 100px;
+    height: 44px;
+}
+
+.LikesAtList {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 6px;
+    max-width: 24px;
+}

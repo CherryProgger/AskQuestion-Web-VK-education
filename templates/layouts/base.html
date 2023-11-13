@@ -113,10 +113,13 @@
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
     </symbol>
 </svg>
+
+
 <header>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" id="navbar-askme" href="{% url 'index' %}">AskQueston</a>
+            <a class="navbar-brand" id="navbar-askme2" href="{% url 'addQuestion' %}">Add new question</a>
             <form class="d-flex">
                 <input class="form-control me-2" id="navbar-search" type="search" placeholder="Write your question"
                        aria-label="Search">
@@ -127,8 +130,9 @@
                 <div class="navbar-user-info">
                     <p style="color: white; font-size: 14px; margin: 5px 0 0">Alex</p>
                     <div class="navbar-user-control">
-                        <a href="#" class="navbar-user-settings">settings</a>
-                        <a href="#" class="navbar-user-logout" style="margin-left: 10px">log out</a>
+                        <a href="{% url 'settings' %}" class="navbar-user-settings">settings</a>
+                        <a href="{% url 'authorization' %}" class="navbar-user-logout" style="margin-left: 10px">log
+                            out</a>
                     </div>
                 </div>
             </div>
@@ -140,11 +144,10 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-            {% block content %}
+                {% block content %}
 
 
-
-            {% endblock %}
+                {% endblock %}
             </div>
             <div class="col-4">
                 <ul class="list-group" style="margin-left: 100px; font-width: 500px;">

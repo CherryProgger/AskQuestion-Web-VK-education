@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 
-
 questionsCount = 20
 questionsCountOnOnePage = 10
-
 
 QUESTIONS = [
     {
@@ -14,7 +12,6 @@ QUESTIONS = [
     } for i in range(questionsCount)
 ]
 
-
 PAGES = [
     {
         'id': i,
@@ -23,7 +20,7 @@ PAGES = [
 ]
 
 
-def paginate(objects, page, per_page = questionsCountOnOnePage):
+def paginate(objects, page, per_page=questionsCountOnOnePage):
     paginator = Paginator(objects, per_page)
     return paginator.page(page)
 
@@ -40,7 +37,8 @@ def addQuestion(request):
 def answersList(request, question_id):
     item = QUESTIONS[question_id]
     page: object = request.GET.get('page', 1)
-    return render(request, 'answersList.html', {'question': item, 'questions': paginate(QUESTIONS, page), 'pages': PAGES})
+    return render(request, 'answersList.html',
+                  {'question': item, 'questions': paginate(QUESTIONS, page), 'pages': PAGES})
 
 
 def tagQuestions(request):

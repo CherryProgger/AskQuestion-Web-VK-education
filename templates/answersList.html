@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="col-9">
-        <div class="question-title"><a href="">{{ question.title }}</a></div>
+        <div class="question-title">{{ question.title }}</div>
         <div class="question-text">{{ question.content }}</div>
         <br/>
         <div class="row ansTag">
@@ -30,75 +30,14 @@
 </div>
 <hr>
 
+{% for question in questions %}
 
+{% include 'components/answersList-item.html' %}
 
-<div class="row question">
-    <div class="col-3">
-        <img src="../static/img/ava.jpg" alt="" class="question-image">
-        <br/>
-        <div class="row likes">
-            <div class="col-8">
-                <div class="likepostbuttn">
-                    <button type="button" class="btn btn-outline-primary">Like post</button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="row Likes">5</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9">
-        <div class="question-text">A standard guitar has six strings made of various materials such as
-            nylon, steel, or a combination of both (classical guitars, for example, would typically use
-            nylon).
-            The top three strings, also known as the treble strings, are typically made of plain steel,
-            while the bottom three strings, also known as the bass strings, are made of a steel core
-            wrapped in a thin layer of metal such as bronze or nickel.
-            The thickness of each string determines its pitch.
-        </div>
-        <br/>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Correct</label>
-        </div>
-    </div>
-</div>
-
-<div class="row question">
-    <div class="col-3">
-        <img src="../static/img/ava.jpg" alt="" class="question-image">
-        <br/>
-        <div class="row likes">
-            <div class="col-8">
-                <div class="likepostbuttn">
-                    <button type="button" class="btn btn-outline-primary">Like post</button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="row Likes">5</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9">
-        <div class="question-text">A standard guitar has six strings made of various materials such as
-            nylon, steel, or a combination of both (classical guitars, for example, would typically use
-            nylon).
-            The top three strings, also known as the treble strings, are typically made of plain steel,
-            while the bottom three strings, also known as the bass strings, are made of a steel core
-            wrapped in a thin layer of metal such as bronze or nickel.
-            The thickness of each string determines its pitch.
-        </div>
-        <br/>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-            <label class="form-check-label" for="exampleCheck2">Correct</label>
-        </div>
-    </div>
-</div>
+{% endfor %}
 
 <hr>
-<div class="mb-3">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+<div class="mb-3"><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                               placeholder="Write your answer here"></textarea>
 </div>
 
@@ -108,7 +47,8 @@
     </ul>
 </div>
 </br>
-</br>
+
+
 
 
 {% endblock %}

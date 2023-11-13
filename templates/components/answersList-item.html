@@ -14,12 +14,11 @@
         </div>
     </div>
     <div class="col-9">
-        <div class="question-title">{{ question.title }}</div>
         <div class="question-text">{{ question.content }}</div>
         <br/>
-        <div class="row ansTag">
-            <div class="col-2"><a href="{% url 'question' question.id %}">answers</a></div>
-            <div class="col-10">Tag: <a href="{% url 'tagsPage' %}">Guitars</a></div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Correct</label>
         </div>
     </div>
 </div>

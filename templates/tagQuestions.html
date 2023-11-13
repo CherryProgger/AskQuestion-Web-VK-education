@@ -1,119 +1,24 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-<h1>Tag: Guitar</h1>
 
-<div class="row question">
-    <div class="col-3">
-        <img src="../static/img/ava.jpg" alt="" class="question-image">
-        <br/>
-        <div class="row likes">
-            <div class="col-8">
-                <div class="likepostbuttn">
-                    <button type="button" class="btn btn-outline-primary">Like post</button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="row Likes">5</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9">
-        <div class="question-title"><a href="">What Are the Strings on a Guitar?</a></div>
-        <div class="question-text">A standard guitar has six strings made of various materials such as
-            nylon, steel, or a combination of both (classical guitars, for example, would typically use
-            nylon).
-            The top three strings, also known as the treble strings, are typically made of plain steel,
-            while the bottom three strings, also known as the bass strings, are made of a steel core
-            wrapped in a thin layer of metal such as bronze or nickel.
-            The thickness of each string determines its pitch, with the thinnest string producing the
-            highest pitch and the thickest string producing the lowest pitch.
-        </div>
-        <br/>
-        <div class="row ansTag">
-            <div class="col-2"><a href="">answers</a></div>
-            <div class="col-10">Tags: <a href="">Guitars</a>, <a href="">String</a></div>
-        </div>
-    </div>
-</div>
+<h1>Tag: Guitars</h1>
 
-<div class="row question">
-    <div class="col-3">
-        <img src="../static/img/ava.jpg" alt="" class="question-image">
-        <br/>
-        <div class="row likes">
-            <div class="col-8">
-                <div class="likepostbuttn">
-                    <button type="button" class="btn btn-outline-primary">Like post</button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="row Likes">5</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9">
-        <div class="question-title"><a href="">What Are the Strings on a Guitar?</a></div>
-        <div class="question-text">A standard guitar has six strings made of various materials such as
-            nylon, steel, or a combination of both (classical guitars, for example, would typically use
-            nylon).
-            The top three strings, also known as the treble strings, are typically made of plain steel,
-            while the bottom three strings, also known as the bass strings, are made of a steel core
-            wrapped in a thin layer of metal such as bronze or nickel.
-            The thickness of each string determines its pitch, with the thinnest string producing the
-            highest pitch and the thickest string producing the lowest pitch.
-        </div>
-        <br/>
-        <div class="row ansTag">
-            <div class="col-2"><a href="">answers</a></div>
-            <div class="col-10">Tags: <a href="">Guitars</a>, <a href="">String</a></div>
-        </div>
-    </div>
-</div>
+{% for question in questions %}
 
-<div class="row question">
-    <div class="col-3">
-        <img src="../static/img/ava.jpg" alt="" class="question-image">
-        <br/>
-        <div class="row likes">
-            <div class="col-8">
-                <div class="likepostbuttn">
-                    <button type="button" class="btn btn-outline-primary">Like post</button>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="row Likes">5</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9">
-        <div class="question-title"><a href="">What Are the Strings on a Guitar?</a></div>
-        <div class="question-text">A standard guitar has six strings made of various materials such as
-            nylon, steel, or a combination of both (classical guitars, for example, would typically use
-            nylon).
-            The top three strings, also known as the treble strings, are typically made of plain steel,
-            while the bottom three strings, also known as the bass strings, are made of a steel core
-            wrapped in a thin layer of metal such as bronze or nickel.
-            The thickness of each string determines its pitch, with the thinnest string producing the
-            highest pitch and the thickest string producing the lowest pitch.
-        </div>
-        <br/>
-        <div class="row ansTag">
-            <div class="col-2"><a href="">answers</a></div>
-            <div class="col-10">Tags: <a href="">Guitars</a>, <a href="">String</a></div>
-        </div>
-    </div>
-</div>
+{% include 'components/question-item.html' %}
+
+{% endfor %}
 </br>
-
 <div class="pages">
     <nav aria-label="Page navigation example">
         <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            <li class="page-item"><a class="page-link" href="{% url 'index' %}">1</a></li>
+            {% for pages in pages %}
+
+            {% include 'components/paginator-item.html' %}
+
+            {% endfor %}
         </ul>
     </nav>
     </ul>

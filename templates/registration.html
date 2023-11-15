@@ -38,9 +38,9 @@
         <button type="button" class="btn btn-outline-primary">Choose from gallery</button>
     </div>
     </br>
-    <button type="submit" class="btn btn-outline-primary" href="{% url 'index' %}">Create account</button>
+    <a class="btn btn-outline-primary" href="{% url 'index' %}">Create account</a>
     </br>
 </form>
 </br>
-<div class="question-title">Have account? Log in <a href="{% url 'authorization' %}">here</a></div>
+<div class="question-title">Have account? Log in <a style="color: #6c757d" href="{% url 'authorization' %}">here</a></div>
 {% endblock %}

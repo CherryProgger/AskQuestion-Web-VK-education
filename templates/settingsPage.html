@@ -9,15 +9,15 @@
                placeholder="Alex@mail.ru">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Login</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Rockstar">
+        <label for="exampleInputLogin" class="form-label">Login</label>
+        <input type="password" class="form-control" id="exampleInputLogin" placeholder="Rockstar">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">NickName</label>
-        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Alex">
+        <label for="exampleInputNickName" class="form-label">NickName</label>
+        <input type="password" class="form-control" id="exampleInputNickName" placeholder="Alex">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Upload Avatar</label>
+        <label class="form-label">Upload Avatar</label>
         </br>
         <img src="../static/img/ava.jpg" alt="" class="question-image">
         </br>
@@ -25,6 +25,6 @@
         </br>
     </div>
     <hr>
-    <button type="submit" class="btn btn-outline-primary">Save changes</button>
+    <a class="btn btn-outline-primary" href="{% url 'index' %}">Save changes</a>
 </form>
 {% endblock %}

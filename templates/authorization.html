@@ -21,10 +21,9 @@
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <button type="submit" class="btn btn-outline-primary">Log in</button>
+    <a class="btn btn-outline-primary" href="{% url 'index' %}">Log in</a>
     </br>
     </br>
-    <div class="question-title"><a href="{% url 'registration' %}">Create new account</a></div>
-
+    <a class="btn btn-outline-primary" href="{% url 'registration' %}">Create new account</a>
 </form>
 {% endblock %}

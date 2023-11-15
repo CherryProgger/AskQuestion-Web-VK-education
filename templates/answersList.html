@@ -23,8 +23,11 @@
         <div class="question-text">{{ question.content }}</div>
         <br/>
         <div class="row ansTag">
-            <div class="col-2"><a href="">answers</a></div>
-            <div class="col-10">Tag: <a href="{% url 'tagsPage' %}">Guitars</a></div>
+            <div class="col-10">Tag:
+                {% for tag in question.tag %}
+                <a style="color: #6c757d" href="{% url 'tagsPage' tag %}">{{ tag }}</a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
@@ -38,17 +41,16 @@
 
 <hr>
 <div class="mb-3"><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                              placeholder="Write your answer here"></textarea>
+                            placeholder="Write your answer here"></textarea>
 </div>
 
 <div class="row askbutton">
     <ul class="list-group" style="margin-left: 15px; max-width: 150px;">
-        <button type="button" class="btn btn-outline-primary">Answer now!</button>
+        <a class="btn btn-outline-primary" href="{% url 'index' %}">Answer now!</a>
     </ul>
 </div>
 </br>
 
-
-
+{% include 'components/paginator-item.html' %}
 
 {% endblock %}

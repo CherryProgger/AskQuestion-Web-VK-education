@@ -2,9 +2,8 @@
 
 {% block content %}
 
-<h1>New Questions</h1>
-<a class="btn btn-outline-primary" href="{% url 'hotQuestions' %}">Hot questions</a>
-
+<h1>Hot Questions</h1>
+<a class="btn btn-outline-primary" href="{% url 'index' %}">New questions</a>
 {% for question in questions %}
 
 {% include 'components/question-item.html' %}

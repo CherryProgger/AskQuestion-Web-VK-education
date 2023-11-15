@@ -27,5 +27,4 @@ urlpatterns = [
     path('settingsPage', views.settingsPage, name='settings'),
     path('authorization', views.authorization, name='authorization'),
     path('registration', views.registration, name='registration'),
-    path('admin/', admin.site.urls),
 ]

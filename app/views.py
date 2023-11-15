@@ -31,13 +31,13 @@ def paginate(objects, request, per_page=PER_PAGE):
     try:
         if int(page) <= 0:
             page = 1
-        elif int(page) > len(QUESTIONS) // per_page and len(QUESTIONS) % per_page == 0:
-            page = len(QUESTIONS) // per_page
-        elif int(page) > len(QUESTIONS) // per_page + 1:
-            if len(QUESTIONS) % per_page == 0:
-                page = len(QUESTIONS) // per_page
+        elif int(page) > len(objects) // per_page and len(objects) % per_page == 0:
+            page = len(objects) // per_page
+        elif int(page) > len(objects) // per_page + 1:
+            if len(objects) % per_page == 0:
+                page = len(objects) // per_page
             else:
-                page = len(QUESTIONS) // per_page + 1
+                page = len(objects) // per_page + 1
     except:
         page = 1
     return [paginator.page(page), int(page)]
